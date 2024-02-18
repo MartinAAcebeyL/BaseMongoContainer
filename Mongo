@@ -8,8 +8,11 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.9/community' >> /etc/apk/repos
 # Instala las herramientas de MongoDB
 RUN apk add --no-cache mongodb
 
+# Copia el archivo de configuración personalizado para MongoDB
+COPY mongod.conf /etc/mongod.conf
+
 # Define el directorio de datos de MongoDB como un volumen
 VOLUME /data/db
 
 # Configura el comando por defecto para iniciar MongoDB
-CMD [ "mongod", "--bind_ip", "0.0.0.0" ]
+CMD ["mongod", "--config", "/etc/mongod.conf"]
