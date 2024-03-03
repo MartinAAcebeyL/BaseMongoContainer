@@ -49,10 +49,11 @@ remove_mongo_image:
 help:
 	@echo "build_mongo_alpine_image: Build the mongo alpine image"
 	@echo "build_mongo_latest_image: Build the mongo latest image"
-	@echo "run_mongo_container: Run the mongo container"
+	@echo "run_mongo_latest_container: Run the mongo latest container"
+	@echo "run_mongo_alpine_container: Run the mongo alpine container"
 	@echo "run_detach_mongo_container: Run the mongo container in detach mode"
 	@echo "start_mongo_container: Start the mongo container"
 	@echo "stop_mongo_container: Stop the mongo container"
 	@echo "remove_mongo_container: Remove the mongo container"
 	@echo "remove_mongo_image: Remove the mongo image"
-	@echo "help: Show this help message"
+	@echo "help"
