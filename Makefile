@@ -11,10 +11,10 @@ export NETWORK
 
 
 build_mongo_alpine_image:
-	docker build -t $(MONGO_CONTAINER_ALPINE_TAG) -f MongoAlpine .
+	docker build --tag $(MONGO_CONTAINER_ALPINE_TAG) -f MongoAlpine .
 
 build_mongo_latest_image:
-	docker build -t $(MONGO_CONTAINER_LATEST_TAG) -f MongoLatest .
+	docker build --tag $(MONGO_CONTAINER_LATEST_TAG) -f MongoLatest .
 
 run_mongo_latest_container:
 	docker run -p $(MONGO_CONTAINER_PORT):27017 --network $(NETWORK) \
