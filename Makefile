@@ -57,3 +57,4 @@ help:
 	@echo "remove_mongo_container: Remove the mongo container"
 	@echo "remove_mongo_image: Remove the mongo image"
 	@echo "help"
+	
