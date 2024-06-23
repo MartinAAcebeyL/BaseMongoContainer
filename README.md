@@ -1,32 +1,31 @@
-# Proyecto de Levantamiento de Contenedores MongoDB
-Este proyecto consiste en proporcionar una manera fácil y rápida de levantar contenedores de MongoDB utilizando imágenes latest y alpine. Está diseñado para ser altamente personalizable utilizando variables de entorno, y también incluye atajos útiles mediante un archivo Makefile.
+# MongoDB Container Lifting Project
+This project is about providing a quick and easy way to build MongoDB containers using latest and alpine images. It is designed to be highly customizable using environment variables, and also includes useful shortcuts using a Makefile.
 
-## Requisitos
-* Docker instalado en tu sistema.
-* GNU Make para utilizar los atajos proporcionados en el archivo Makefile.
+## Requirements
+* Docker installed on your system.
+* GNU Make to use the shortcuts provided in the Makefile.
 
-## Uso
-1. Clona este repositorio en tu máquina local:
-2. Personaliza tus variables de entorno si es necesario.
-3. Levanta el contenedor de MongoDB utilizando los atajos de Makefile
+## Use
+1. Clone this repository
+2. Customize your environment variables
+3. Raise MongoDB container using Makefile shortcuts
 
 
-Si necesitas una guia con los atajos puedes usar:
+If you need a guide with the shortcuts you can use:
 
 ``` Makefile
 make help
 ```
 
-## Variables de entorno
+## Environment Variables
 
-### Configuración del Contenedor MongoDB
-* MONGO_CONTAINER_NAME: El nombre que se asignará al contenedor de MongoDB cuando se levante.
-* MONGO_CONTAINER_PORT: El puerto en el que el contenedor de MongoDB estará escuchando las conexiones.
-* MONGO_CONTAINER_IMAGE: La imagen de Docker utilizada para el contenedor de MongoDB, puede ser latest, alpine u otra versión específica.
-* MONGO_CONTAINER_VOLUME: La ruta del volumen que se montará.
-### Configuración de la Inicialización de MongoDB
-* MONGO_INITDB_ROOT_USERNAME: El nombre de usuario utilizado para la autenticación.
-* MONGO_INITDB_ROOT_PASSWORD: La contraseña utilizada para la autenticación.
-* MONGO_INITDB_DATABASE: El nombre de la base de datos que se creará inicialmente.
-### Configuración de la Red
-NETWORK: El nombre de la red Docker.
+### MongoDB Container Configuration
+* MONGO_CONTAINER_NAME: The name that will be assigned to the MongoDB container when it is raised.
+* MONGO_CONTAINER_PORT: The port on which the MongoDB container will be listening for connections.
+* MONGO_CONTAINER_< >_TAG: The Docker image used for the MongoDB container, it can be latest, alpine or another specific version, into < >.
+### Configuring MongoDB Initialization
+* MONGO_INITDB_ROOT_USERNAME: The username used for authentication.
+* MONGO_INITDB_ROOT_PASSWORD: The password used for authentication.
+* MONGO_INITDB_DATABASE: The name of the database to be created initially.
+### Network settings
+NETWORK: Name of the Docker network.
